@@ -6,6 +6,7 @@ ${URL}    https://elo-escolar-ten.vercel.app
 ${BROWSER}    chrome
 ${USUARIO_ADMIN_VALIDO}    admin@teste.com
 ${SENHA_VALIDA}    Admin1234
+${SENHA_INVALIDA}    Naovaientrar
 
 *** Keywords ***
 Abrir Sistema
