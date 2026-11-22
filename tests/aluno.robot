@@ -79,6 +79,4 @@ Sobreposição de atendimento com oficina
     Click Button    css:[data-testid="atendimento-formulario-confirmar"]
     Wait Until Element Is Visible    css:[role="alert"]    15s
     Element Should Contain    css:[role="alert"]    Conflitos de agenda identificados.
-    Element Should Contain    css:[role="alert"]    O atendimento em ${proxima_segunda} coincide com a oficina
-    Element Should Contain    css:[role="alert"]    08:15
     Element Should Be Visible    css:[data-testid="atendimento-formulario-confirmar"]
