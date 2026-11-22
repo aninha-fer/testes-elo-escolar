@@ -12,10 +12,10 @@ Cadastrar Novo Aluno
     Click Button    css:[data-testid="alunos-novo"]
     Input Text    id:nome-aluno    Luisa Santos
     Click Element    css:[data-testid="aluno-formulario-turno-manha"]
-    Click Element    css:[data-testid="aluno-formulario-frequencia-1"]
+    Click Element    css:[data-testid="aluno-formulario-frequencia-todos"]
     Click Button    css:[data-testid="aluno-formulario-confirmar"]
-    Wait Until Page Contains    Luisa Santos    10s
-
+    Wait Until Element Is Visible    css:[aria-label="Notificações"]
+    Element Text Should Be    css:[aria-label="Notificações"]    Aluno cadastrado com sucesso.
 
 Cadastrar Aluno Sem Nome
     [Tags]    aluno    negativo

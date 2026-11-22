@@ -1,228 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.14.10 on win32)" generated="2026-11-22T13:38:45.963095" rpa="false" schemaversion="5">
-<suite id="s1" name="Login" source="C:\Users\Scheila Knobeloch\OneDrive\Documentos\GitHub\testes-elo-escolar\tests\login.robot">
-<test id="s1-t1" name="Login com Sucesso" line="8">
+<robot generator="Robot 7.5.1 (Python 3.14.1 on win32)" generated="2026-11-22T15:53:44.163772" rpa="false" schemaversion="5">
+<suite id="s1" name="Turma" source="C:\Users\anafe\Documents\xiu\testes-elo-escolar\tests\turma.robot">
+<test id="s1-t1" name="Criar turma regular" line="12">
+<kw name="Abrir Sistema e Fazer Login" owner="comum" type="SETUP">
 <kw name="Abrir Sistema" owner="comum">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:46.941452" level="INFO">Opening browser 'chrome' to base url 'https://elo-escolar-ten.vercel.app'.</msg>
+<msg time="2026-11-22T15:53:44.378143" level="INFO">Opening browser 'chrome' to base url 'https://elo-escolar-ten.vercel.app'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-22T13:38:46.940991" elapsed="2.222591"/>
+<status status="PASS" start="2026-11-22T15:53:44.377934" elapsed="1.351687"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-22T13:38:49.163995" elapsed="0.050889"/>
+<status status="PASS" start="2026-11-22T15:53:45.730112" elapsed="0.027283"/>
 </kw>
-<status status="PASS" start="2026-11-22T13:38:46.938966" elapsed="2.276326"/>
+<status status="PASS" start="2026-11-22T15:53:44.377023" elapsed="1.380530"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id:login-title</arg>
 <arg>60s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-22T13:38:49.218720" elapsed="0.486548"/>
+<status status="PASS" start="2026-11-22T15:53:45.757690" elapsed="0.434864"/>
 </kw>
 <kw name="Fazer Login" owner="comum">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:49.707736" level="INFO">Typing text 'admin@teste.com' into text field 'id:login-email'.</msg>
+<msg time="2026-11-22T15:53:46.193248" level="INFO">Typing text 'admin@teste.com' into text field 'id:login-email'.</msg>
 <arg>id:login-email</arg>
 <arg>${usuario}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:38:49.707163" elapsed="0.204504"/>
+<status status="PASS" start="2026-11-22T15:53:46.193055" elapsed="0.090502"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:49.912603" level="INFO">Typing password into text field 'id:login-senha'.</msg>
-<msg time="2026-11-22T13:38:49.964422" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-11-22T15:53:46.283953" level="INFO">Typing password into text field 'id:login-senha'.</msg>
+<msg time="2026-11-22T15:53:46.300549" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id:login-senha</arg>
 <arg>${senha}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:38:49.912030" elapsed="0.157700"/>
+<status status="PASS" start="2026-11-22T15:53:46.283727" elapsed="0.056888"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:50.070812" level="INFO">Clicking button 'css:[data-testid="login-entrar"]'.</msg>
+<msg time="2026-11-22T15:53:46.342219" level="INFO">Clicking button 'css:[data-testid="login-entrar"]'.</msg>
 <arg>css:[data-testid="login-entrar"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:38:50.070161" elapsed="0.139231"/>
+<status status="PASS" start="2026-11-22T15:53:46.341125" elapsed="0.049185"/>
 </kw>
 <arg>${USUARIO_ADMIN_VALIDO}</arg>
 <arg>${SENHA_VALIDA}</arg>
-<status status="PASS" start="2026-11-22T13:38:49.706346" elapsed="0.503256"/>
+<status status="PASS" start="2026-11-22T15:53:46.192763" elapsed="0.197662"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${URL}/</arg>
 <arg>10s</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2026-11-22T13:38:50.210121" elapsed="3.206466"/>
+<status status="PASS" start="2026-11-22T15:53:46.390548" elapsed="2.721060"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-22T13:38:53.417700" elapsed="2.892847"/>
-</kw>
-<tag>login</tag>
-<tag>positivo</tag>
-<status status="PASS" start="2026-11-22T13:38:46.937368" elapsed="9.373763"/>
-</test>
-<test id="s1-t2" name="Login sem Sucesso" line="15">
-<kw name="Abrir Sistema" owner="comum">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:56.315014" level="INFO">Opening browser 'chrome' to base url 'https://elo-escolar-ten.vercel.app'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-22T13:38:56.314644" elapsed="2.000149"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-22T13:38:58.315157" elapsed="0.035230"/>
-</kw>
-<status status="PASS" start="2026-11-22T13:38:56.313866" elapsed="2.036705"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id:login-title</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-22T13:38:58.351099" elapsed="0.479755"/>
-</kw>
-<kw name="Fazer Login" owner="comum">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:58.833650" level="INFO">Typing text 'admin@teste.com' into text field 'id:login-email'.</msg>
-<arg>id:login-email</arg>
-<arg>${usuario}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:38:58.832974" elapsed="0.216597"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:59.050477" level="INFO">Typing password into text field 'id:login-senha'.</msg>
-<msg time="2026-11-22T13:38:59.105092" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:login-senha</arg>
-<arg>${senha}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:38:59.049957" elapsed="0.193837"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:38:59.245288" level="INFO">Clicking button 'css:[data-testid="login-entrar"]'.</msg>
-<arg>css:[data-testid="login-entrar"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:38:59.244404" elapsed="0.130926"/>
-</kw>
-<arg>${USUARIO_ADMIN_VALIDO}</arg>
-<arg>${SENHA_INVALIDA}</arg>
-<status status="PASS" start="2026-11-22T13:38:58.831945" elapsed="0.543578"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id:login-title</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-22T13:38:59.376055" elapsed="0.025994"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-22T13:38:59.403348" elapsed="2.501835"/>
-</kw>
-<tag>login</tag>
-<tag>negativo</tag>
-<status status="PASS" start="2026-11-22T13:38:56.312739" elapsed="5.593171"/>
-</test>
-<test id="s1-t3" name="Pesquisar Usuário Pelo E-mail" line="23">
-<kw name="Abrir Sistema e Fazer Login" owner="comum">
-<kw name="Abrir Sistema" owner="comum">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:39:01.915314" level="INFO">Opening browser 'chrome' to base url 'https://elo-escolar-ten.vercel.app'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-22T13:39:01.914600" elapsed="1.900647"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-22T13:39:03.815554" elapsed="0.032415"/>
-</kw>
-<status status="PASS" start="2026-11-22T13:39:01.912971" elapsed="1.935189"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id:login-title</arg>
-<arg>60s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-22T13:39:03.848408" elapsed="0.467333"/>
-</kw>
-<kw name="Fazer Login" owner="comum">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:39:04.317854" level="INFO">Typing text 'admin@teste.com' into text field 'id:login-email'.</msg>
-<arg>id:login-email</arg>
-<arg>${usuario}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:39:04.317225" elapsed="0.176416"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:39:04.494932" level="INFO">Typing password into text field 'id:login-senha'.</msg>
-<msg time="2026-11-22T13:39:04.539040" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:login-senha</arg>
-<arg>${senha}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:39:04.494190" elapsed="0.124300"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:39:04.620016" level="INFO">Clicking button 'css:[data-testid="login-entrar"]'.</msg>
-<arg>css:[data-testid="login-entrar"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:39:04.618998" elapsed="0.124227"/>
-</kw>
-<arg>${USUARIO_ADMIN_VALIDO}</arg>
-<arg>${SENHA_VALIDA}</arg>
-<status status="PASS" start="2026-11-22T13:39:04.316191" elapsed="0.427267"/>
-</kw>
-<kw name="Wait Until Location Is" owner="SeleniumLibrary">
-<arg>${URL}/</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2026-11-22T13:39:04.743974" elapsed="2.621579"/>
-</kw>
-<status status="PASS" start="2026-11-22T13:39:01.911716" elapsed="5.454100"/>
+<status status="PASS" start="2026-11-22T15:53:44.376651" elapsed="4.735097"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:39:07.366966" level="INFO">Clicking element 'css:[data-testid="menu-usuarios"]'.</msg>
-<arg>css:[data-testid="menu-usuarios"]</arg>
+<msg time="2026-11-22T15:53:49.112618" level="INFO">Clicking element 'css:[data-testid="menu-turmas"]'.</msg>
+<arg>css:[data-testid="menu-turmas"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:39:07.366431" elapsed="0.158679"/>
+<status status="PASS" start="2026-11-22T15:53:49.112198" elapsed="0.068365"/>
 </kw>
-<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
-<arg>/usuarios</arg>
-<doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-11-22T13:39:07.528756" elapsed="0.012930"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[data-testid="turmas-nova"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-22T15:53:49.181053" elapsed="0.220544"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:49.402831" level="INFO">Clicking button 'css:[data-testid="turmas-nova"]'.</msg>
+<arg>css:[data-testid="turmas-nova"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:49.402102" elapsed="0.062387"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-22T13:39:07.543917" level="INFO">Typing text 'anafer.digital@gmail.com' into text field 'css:[data-testid="usuarios-busca"]'.</msg>
-<arg>css:[data-testid="usuarios-busca"]</arg>
-<arg>anafer.digital@gmail.com</arg>
+<msg time="2026-11-22T15:53:49.465839" level="INFO">Typing text 'Set Variable Turma teste Generate Random String 8 [NUMBERS]' into text field 'id:turma-nome'.</msg>
+<arg>id:turma-nome</arg>
+<arg>${nome_turma}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-22T13:39:07.543187" elapsed="0.186032"/>
+<status status="PASS" start="2026-11-22T15:53:49.465318" elapsed="0.222789"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>anafer.digital@gmail.com</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-11-22T13:39:07.729776" elapsed="1.973127"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:#turma-ano option[value="2"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-11-22T15:53:49.688586" elapsed="1.257027"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:50.946163" level="INFO">Selecting options from selection list 'id:turma-ano' by value 2.</msg>
+<arg>id:turma-ano</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-11-22T15:53:50.945917" elapsed="0.051112"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:50.997534" level="INFO">Verifying list 'id:turma-ano' has option [ 2 ] selected.</msg>
+<msg time="2026-11-22T15:53:51.009963" level="INFO">Current page contains list 'id:turma-ano'.</msg>
+<arg>id:turma-ano</arg>
+<arg>2</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-11-22T15:53:50.997302" elapsed="0.048831"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:turma-sala</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.046382" elapsed="0.268819"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:51.316342" level="INFO">Selecting options from selection list 'id:turma-sala' by value 5.</msg>
+<arg>id:turma-sala</arg>
+<arg>5</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.315797" elapsed="0.048064"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:51.364347" level="INFO">Verifying list 'id:turma-sala' has option [ 5 ] selected.</msg>
+<msg time="2026-11-22T15:53:51.382749" level="INFO">Current page contains list 'id:turma-sala'.</msg>
+<arg>id:turma-sala</arg>
+<arg>5</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.364127" elapsed="0.068693"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:51.433426" level="INFO">Typing text '15' into text field 'id:turma-vagas'.</msg>
+<arg>id:turma-vagas</arg>
+<arg>15</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.433158" elapsed="0.050829"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:51.484456" level="INFO">Clicking button 'css:[data-testid="turma-formulario-profissional-1"]'.</msg>
+<arg>css:[data-testid="turma-formulario-profissional-1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.484247" elapsed="0.089984"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:51.574867" level="INFO">Clicking button 'css:[data-testid="turma-formulario-confirmar"]'.</msg>
+<arg>css:[data-testid="turma-formulario-confirmar"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.574622" elapsed="0.054651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[aria-label="Notificações"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-22T15:53:51.629549" elapsed="1.940742"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:53.570874" level="INFO">Verifying element 'css:[aria-label="Notificações"]' contains exact text 'Turma cadastrada com sucesso.'.</msg>
+<arg>css:[aria-label="Notificações"]</arg>
+<arg>Turma cadastrada com sucesso.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-11-22T15:53:53.570585" elapsed="0.009707"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-22T13:39:09.705471" elapsed="2.454747"/>
+<status status="PASS" start="2026-11-22T15:53:53.580719" elapsed="2.319124"/>
 </kw>
-<status status="PASS" start="2026-11-22T13:39:01.908908" elapsed="10.251942"/>
+<status status="PASS" start="2026-11-22T15:53:44.375772" elapsed="11.524468"/>
 </test>
-<status status="PASS" start="2026-11-22T13:38:45.968495" elapsed="26.194816"/>
-</suite>
-<statistics>
-<total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
-</total>
-<tag>
-<stat pass="2" fail="0" skip="0">login</stat>
-<stat pass="1" fail="0" skip="0">negativo</stat>
-<stat pass="1" fail="0" skip="0">positivo</stat>
-</tag>
-<suite>
-<stat name="Login" id="s1" pass="3" fail="0" skip="0">Login</stat>
-</suite>
-</statistics>
+<test id="s1-t2" name="Criar oficina" line="29">
+<kw name="Abrir Sistema e Fazer Login" owner="comum" type="SETUP">
+<kw name="Abrir Sistema" owner="comum">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:55.901773" level="INFO">Opening browser 'chrome' to base url 'https://elo-escolar-ten.vercel.app'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-22T15:53:55.901608" elapsed="1.352998"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-22T15:53:57.254888" elapsed="0.038796"/>
+</kw>
+<status status="PASS" start="2026-11-22T15:53:55.901313" elapsed="1.393131"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:login-title</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-22T15:53:57.295100" elapsed="0.268513"/>
+</kw>
+<kw name="Fazer Login" owner="comum">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:57.564714" level="INFO">Typing text 'admin@teste.com' into text field 'id:login-email'.</msg>
+<arg>id:login-email</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:57.564433" elapsed="0.104852"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:57.669938" level="INFO">Typing password into text field 'id:login-senha'.</msg>
+<msg time="2026-11-22T15:53:57.689539" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:login-senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:57.669575" elapsed="0.059460"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:53:57.729483" level="INFO">Clicking button 'css:[data-testid="login-entrar"]'.</msg>
+<arg>css:[data-testid="login-entrar"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:53:57.729236" elapsed="0.051763"/>
+</kw>
+<arg>${USUARIO_ADMIN_VALIDO}</arg>
+<arg>${SENHA_VALIDA}</arg>
+<status status="PASS" start="2026-11-22T15:53:57.563984" elapsed="0.217285"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${URL}/</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-11-22T15:53:57.781485" elapsed="2.270384"/>
+</kw>
+<status status="PASS" start="2026-11-22T15:53:55.901099" elapsed="4.151004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.052897" level="INFO">Clicking element 'css:[data-testid="menu-turmas"]'.</msg>
+<arg>css:[data-testid="menu-turmas"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.052567" elapsed="0.096068"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[data-testid="turmas-tipo-oficina"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.149267" elapsed="0.229045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.378939" level="INFO">Clicking element 'css:[data-testid="turmas-tipo-oficina"]'.</msg>
+<arg>css:[data-testid="turmas-tipo-oficina"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.378724" elapsed="0.052223"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.432102" level="INFO">Clicking button 'css:[data-testid="turmas-nova"]'.</msg>
+<arg>css:[data-testid="turmas-nova"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.431834" elapsed="0.090855"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.523300" level="INFO">Typing text 'Set Variable Turma teste Generate Random String 8 [NUMBERS]' into text field 'id:turma-nome'.</msg>
+<arg>id:turma-nome</arg>
+<arg>${nome_turma}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.523064" elapsed="0.158948"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:#turma-horario option[value="08:15"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.682359" elapsed="0.007108"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.690215" level="INFO">Selecting options from selection list 'id:turma-horario' by value 08:15.</msg>
+<arg>id:turma-horario</arg>
+<arg>08:15</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.689903" elapsed="0.107439"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.797938" level="INFO">Verifying list 'id:turma-horario' has option [ 08:15 ] selected.</msg>
+<msg time="2026-11-22T15:54:00.814301" level="INFO">Current page contains list 'id:turma-horario'.</msg>
+<arg>id:turma-horario</arg>
+<arg>08:15</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.797707" elapsed="0.071569"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:00.870037" level="INFO">Clicking button 'css:[data-testid="turma-formulario-dias-semana-1"]'.</msg>
+<arg>css:[data-testid="turma-formulario-dias-semana-1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.869732" elapsed="0.049272"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:#turma-sala option[value="4"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-11-22T15:54:00.919317" elapsed="0.840387"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:01.760237" level="INFO">Selecting options from selection list 'id:turma-sala' by value 4.</msg>
+<arg>id:turma-sala</arg>
+<arg>4</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-11-22T15:54:01.760014" elapsed="0.036895"/>
+</kw>
+<kw name="List Selection Should Be" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:01.797424" level="INFO">Verifying list 'id:turma-sala' has option [ 4 ] selected.</msg>
+<msg time="2026-11-22T15:54:01.811843" level="INFO">Current page contains list 'id:turma-sala'.</msg>
+<arg>id:turma-sala</arg>
+<arg>4</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<status status="PASS" start="2026-11-22T15:54:01.797220" elapsed="0.072399"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:01.870065" level="INFO">Typing text '10' into text field 'id:turma-vagas'.</msg>
+<arg>id:turma-vagas</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:01.869866" elapsed="0.050121"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:01.920497" level="INFO">Clicking button 'css:[data-testid="turma-formulario-profissional-1"]'.</msg>
+<arg>css:[data-testid="turma-formulario-profissional-1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-22T15:54:01.920276" elapsed="0.055707"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-22T15:54:01.976598" level="INFO">Clicking button 'css:[data-testid="turma-formulario-confirmar"]'.</msg>
+<msg time="2026-11-22T15:54:06.078159" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=60126): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/5c3af9d82cae648475f4f4c09749ce6e/screenshot</msg>
+<msg time="2026-11-22T15:54:10.142792" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=60126): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/5c3af9d82cae648475f4f4c09749ce6e/screenshot</msg>
 <errors>
+<msg time="2026-11-22T15:54:06.078159" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=60126): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/5c3af9d82cae648475f4f4c09749ce6e/screenshot</msg>
+<msg time="2026-11-22T15:54:10.142792" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=60126): Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente")': /session/5c3af9d82cae648475f4f4c09749ce6e/screenshot</msg>
+<msg time="2026-11-22T15:54:12.179183" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>
